@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: currency-exchange
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/currencies
+    username: codemaster
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        format_sql: true
+#    show-sql: true
+
+  liquibase:
+    change-log: classpath:/db
+
+api:
+  currency: https://www.cbar.az/currencies
+
