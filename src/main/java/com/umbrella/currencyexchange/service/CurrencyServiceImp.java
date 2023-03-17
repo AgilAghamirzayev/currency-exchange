@@ -1,4 +1,4 @@
-package com.umbrella.currencyexchange.service.impl;
+package com.umbrella.currencyexchange.service;
 
 import com.umbrella.currencyexchange.client.CurrencyClient;
 import com.umbrella.currencyexchange.dto.CurrencyInfoDto;
@@ -10,7 +10,6 @@ import com.umbrella.currencyexchange.entity.CurrencyInfo;
 import com.umbrella.currencyexchange.exception.ResourceNotFoundException;
 import com.umbrella.currencyexchange.mapper.CurrencyMapper;
 import com.umbrella.currencyexchange.repository.CurrencyInfoRepository;
-import com.umbrella.currencyexchange.service.CurrencyService;
 import com.umbrella.currencyexchange.util.Constants;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

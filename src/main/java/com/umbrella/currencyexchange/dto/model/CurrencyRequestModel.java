@@ -1,12 +1,14 @@
 package com.umbrella.currencyexchange.dto.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 
 @Getter
 @Setter
+@Builder
+@ToString
+@EqualsAndHashCode
 public class CurrencyRequestModel {
     private String nominal;
     private String code;

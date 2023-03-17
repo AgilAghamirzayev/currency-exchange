@@ -1,15 +1,15 @@
 package com.umbrella.currencyexchange.dto.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Getter
 @Setter
-@ToString(of = "date")
+@Builder
+@EqualsAndHashCode
+@ToString
 public class CurrencyInfoRequestModel {
     private String date;
     private String base;
