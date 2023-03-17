@@ -1,6 +1,7 @@
 package com.umbrella.currencyexchange.dto.model;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.Map;
@@ -9,6 +10,5 @@ import java.util.Map;
 @Setter
 public class CurrencyDateRequestModel {
     private String base;
-    private String currency;
-    private Map<String, BigDecimal> dateAndValue;
+    private Map<String, Map<String, BigDecimal>> currency;
 }

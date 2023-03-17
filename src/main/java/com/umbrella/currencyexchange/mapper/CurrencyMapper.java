@@ -12,6 +12,7 @@ import org.mapstruct.factory.Mappers;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = "spring", uses = CurrencyMapper.class)
 public abstract class CurrencyMapper {
@@ -24,6 +25,8 @@ public abstract class CurrencyMapper {
 
     public CurrencyDateRequestModel mapToCurrencyDateRequestModel(List<Currency> currencyInfoList, String from) {
         CurrencyDateRequestModel currencyData = new CurrencyDateRequestModel();
+
+        HashMap<String, Map<String, BigDecimal>> currencyToValue = new HashMap<>();
         HashMap<String, BigDecimal> dateAndValue = new HashMap<>();
 
 
@@ -31,9 +34,10 @@ public abstract class CurrencyMapper {
             dateAndValue.put(currency.getCurrencyInfo().getDate(), currency.getValue());
         }
 
+
         currencyData.setBase("AZN");
-        currencyData.setCurrency(from);
-        currencyData.setDateAndValue(dateAndValue);
+        currencyToValue.put(from, dateAndValue);
+        currencyData.setCurrency(currencyToValue);
 
         return currencyData;
     }
