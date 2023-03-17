@@ -1,12 +1,13 @@
 package com.umbrella.currencyexchange.service;
 
-import com.umbrella.currencyexchange.dto.CurrencyInfoDto;
+import com.umbrella.currencyexchange.dto.model.CurrencyDateRequestModel;
 import com.umbrella.currencyexchange.dto.model.CurrencyInfoRequestModel;
 
 import java.time.LocalDate;
 
 public interface CurrencyService {
-    CurrencyInfoRequestModel getCurrency(LocalDate localDate);
-
-    void deleteCurrencyByDate(LocalDate localDate);
+    String save(LocalDate date);
+    void deleteByDate(LocalDate date);
+    CurrencyInfoRequestModel getByDateAndCurrency(LocalDate date, String from);
+    CurrencyDateRequestModel getAllByCurrency(String from);
 }

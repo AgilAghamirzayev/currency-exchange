@@ -12,6 +12,7 @@ import java.math.BigDecimal;
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(of = {"code", "value"})
 public class Currency {
 
     @Id

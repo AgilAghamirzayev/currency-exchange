@@ -16,11 +16,11 @@ public class CurrencyInfoDto {
     private String date;
 
     @JacksonXmlProperty(localName = "Name")
-    private String name;
+    private String base;
 
     @JacksonXmlProperty(localName = "Description")
     private String description;
 
     @JacksonXmlProperty(localName = "ValType")
-    private List<CurrencyDto> currencies;
+    private List<CurrencyDto> result;
 }

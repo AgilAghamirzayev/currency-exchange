@@ -12,6 +12,6 @@ import java.util.List;
 @ToString(of = "date")
 public class CurrencyInfoRequestModel {
     private String date;
-    private String name;
-    private List<CurrencyRequestModel> currencies = new ArrayList<>();
+    private String base;
+    private List<CurrencyRequestModel> result = new ArrayList<>();
 }

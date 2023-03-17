@@ -14,14 +14,14 @@ import java.util.List;
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(of = "date")
+@ToString(of = {"id", "date", "base"})
 public class CurrencyInfo {
 
     @Id
     @GeneratedValue
     private Long id;
     private String date;
-    private String name;
+    private String base;
     private String description;
 
     @CreationTimestamp
@@ -29,6 +29,6 @@ public class CurrencyInfo {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "currency_info_id")
-    private List<Currency> currencies = new ArrayList<>();
+    private List<Currency> result = new ArrayList<>();
 
 }
