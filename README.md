@@ -7,7 +7,7 @@ retrieving currency rates by date and currency.
 
 1. Set your own postgres credentials
 2. You can run postgres image [docker compose up](docker-compose.yml)
-3. Build the project using `mvn clean install`
+3. Build the project using ` mvn clean install -D maven.test.skip=true`
 4. Run using `mvn spring-boot:run`
 5. The web application is accessible via `localhost:8080`
 
