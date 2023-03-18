@@ -20,7 +20,7 @@ spring:
 #    show-sql: true
 
   liquibase:
-    change-log: classpath:/db
+    change-log: classpath:/db/db.changelog-master.yml
 
 api:
   currency: https://www.cbar.az/currencies

@@ -2,17 +2,19 @@ package com.umbrella.currencyexchange.dto;
 
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import java.math.BigDecimal;
 
 @Getter
 @Setter
 @Builder
-@ToString
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
+@XmlAccessorType(XmlAccessType.FIELD)
 public class CurrencyDto {
 
     @JacksonXmlProperty(localName = "Nominal")
