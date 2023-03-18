@@ -3,7 +3,6 @@ package com.umbrella.currencyexchange.dto;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import lombok.*;
 
-import javax.xml.bind.annotation.*;
 import java.util.List;
 
 @Getter
@@ -13,8 +12,6 @@ import java.util.List;
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
-@XmlRootElement(name = "ValCurs")
-@XmlAccessorType(XmlAccessType.FIELD)
 public class CurrencyInfoDto {
 
     @JacksonXmlProperty(localName = "Date")
@@ -26,8 +23,6 @@ public class CurrencyInfoDto {
     @JacksonXmlProperty(localName = "Description")
     private String description;
 
-    @XmlElement(name = "Valute")
-    @XmlElementWrapper(name = "ValType")
     @JacksonXmlProperty(localName = "ValType")
     private List<CurrencyDto> result;
 }

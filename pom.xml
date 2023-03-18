@@ -8,14 +8,15 @@
         <version>3.0.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.umbrella</groupId>
+    <groupId>com.umbrella.currencyexchange</groupId>
     <artifactId>currency-exchange</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>currency-exchange</name>
-    <description>currency-exchange</description>
+
     <properties>
         <java.version>17</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -75,6 +76,7 @@
             <artifactId>mapstruct-processor</artifactId>
             <version>1.5.3.Final</version>
         </dependency>
+
     </dependencies>
 
     <build>

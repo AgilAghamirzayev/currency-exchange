@@ -48,6 +48,7 @@ public class CurrencyServiceImp implements CurrencyService {
         CurrencyInfoDto currencyInfoDto = currencyClient.getCurrencyInfo(formatDate);
 
         CurrencyInfo currencyInfo = currencyMapper.mapToCurrencyInfoEntity(currencyInfoDto);
+        currencyInfo.setDate(formatDate);
 
         currencyInfoRepository.save(currencyInfo);
         log.info("Saved currency to database");

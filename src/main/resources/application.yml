@@ -6,8 +6,8 @@ spring:
     name: currency-exchange
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/currencies
-    username: codemaster
+    url: jdbc:postgresql://127.0.0.1:5432/postgres
+    username: user
     password: password
 
   jpa:
@@ -16,8 +16,7 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-#        format_sql: true
-#    show-sql: true
+
 
   liquibase:
     change-log: classpath:/db/db.changelog-master.yml
